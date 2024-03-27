@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css"
+        />
+        <title>BTC Info</title>
+    </head>
+    <body>
+        <div class="container mt-2">
+            <h1>BTC Info</h1>
+            <h3><span style="color: <%= statusBadge %>">● <%= statusText %></span> (#<%= count %>)</h3>
+            <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Name</th>
+                            <td><%= btc.name %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Height</th>
+                            <td><%= btc.height %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hash</th>
+                            <td><%= btc.hash %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Time</th>
+                            <td><%= btc.time %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Last Record Time</th>
+                            <td><%= last_rec?.time %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Latest URL</th>
+                            <td><%= btc.latest_url %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Previous Hash</th>
+                            <td><%= btc.previous_hash %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Previous URL</th>
+                            <td><%= btc.previous_url %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Peer Count</th>
+                            <td><%= btc.peer_count %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Unconfirmed Count</th>
+                            <td><%= btc.unconfirmed_count %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">High Fee per KB</th>
+                            <td><%= btc.high_fee_per_kb %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Medium Fee per KB</th>
+                            <td><%= btc.medium_fee_per_kb %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Low Fee per KB</th>
+                            <td><%= btc.low_fee_per_kb %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Last Fork Height</th>
+                            <td><%= btc.last_fork_height %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Last Fork Hash</th>
+                            <td><%= btc.last_fork_hash %></td>
+                        </tr>                        
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
